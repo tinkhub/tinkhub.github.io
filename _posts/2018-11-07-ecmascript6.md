@@ -1,13 +1,15 @@
 ---
 title: ECMAScript 6
-key: 20181101
+key: 20181107
 categories: [javascript]
 tags: [ES6, ECMAScript 6, ECMAScript 2015]
 ---
 
 ## ES6 소개
-자바스크립트는 2009년에 이크마스크립트 2009(ECMAScript 2009)가 발표된 후 2015년에 새로운 표준을 발표하게 됩니다. 새로 발표된 이크마스크립트 6(ECMAScript 6, ECMAScript 2015, ES6)는 프로그래밍을 좀 더 유연하고 편하게 할 수 있는 디수의 기능을 포함하고 있습니다. 현재 주요 자바스크립트 엔진에서는 대부분의 기능을 구현한 상태입니다. 각 브라우저별 구현 상태는 [ES6 호환 테이블](http://kangax.github.io/es5-compat-table/es6/)에서 확인 할 수 있습니다.
+자바스크립트는 2009년에 이크마스크립트 2009(ECMAScript 2009)가 발표된 후 2015년에 새로운 표준을 발표하게 됩니다. 새로 발표된 이크마스크립트 6(ECMAScript 6, ECMAScript 2015, ES6)는 프로그래밍을 좀 더 유연하고 편하게 할 수 있는 다수의 기능을 포함하고 있습니다. 현재 주요 자바스크립트 엔진에서는 대부분의 기능을 구현한 상태입니다. 각 브라우저별 구현 상태는 [ES6 호환 테이블](http://kangax.github.io/es5-compat-table/es6/)에서 확인 할 수 있습니다.
+최근 상당한 인기를 끌고 있는 [Node.js](https://nodejs.org)를 배우기 위해서는 ES6에 새로 추가된 기능을 알아두는 것이 여러모로 유용합니다. 특히나 이미 자바스크립트로 프로그래밍을 하는데 익숙하신 분들은 ES6에 추가된 기능을 한번 쭉 훌터보는 것만으로 도움이 됩니다.
 
+이번 글에서는 ES6에 추가된 기능을 뽑아서 간략하게 설명을 하려고 합니다. 목록과 내용은 [Luke Hoban의 글](https://github.com/lukehoban/es6features)에서 가져왔고 새로 작성한 내용과 번역으로 옮겨 놓은 내용이 섞여 있습니다.
 전체 ES6의 내용을 보시려면 [ES6 표준](http://www.ecma-international.org/ecma-262/6.0/)을 참고하세요.
 
 계속해서 살펴 보게될 ES6의 기능은 아래와 같습니다.
@@ -38,7 +40,7 @@ tags: [ES6, ECMAScript 6, ECMAScript 2015]
 ## ES 6 새로운 기능
 ES 6의 새로운 기능을 하나씩 살펴 보도록 하겠습니다.
 ### 화살표 함수
-ES 6에 추가된 기능중에 단연 가장 많이 사용되는 기능입니다. 화살표 함수(Arrow function)는 함수를 간략하게 정의할 수 있는 방법으로 콜백 함수를 만들 때 유용하게 사용할 수 있습니다. 예를 보겠습니다.
+화살표 함수는 ES 6에 추가된 기능중에 단연 가장 많이 사용되는 기능입니다. 화살표 함수(Arrow function)를 사용하면 콜백 함수를 만들 때 간략하면서도 유용하게 사용할 수 있습니다. 예를 보겠습니다.
 {% highlight javascript %}
 const prices = [100, 200, 300];
 // function callback
@@ -47,14 +49,14 @@ const changed = prices.map(function (p) {
 });
 {% endhighlight %}
 배열에 있는 값을 받아서 200을 더한 후 새로운 배열을 생성하는 코드입니다. prices.map에 일반 함수를 인자로 넣었습니다.
-위 일반 함수를 화살표 함수로 변경을 하려면 `function (p)`부분을 `(p) =>` 변경하면 됩니다.
+간단히 보면 위처럼 `function (p)`부분을 `(p) =>` 변경하면 화살표 함수가 됩니다.
 {% highlight javascript %}
 const prices = [100, 200, 300];
 const changed = prices.map((p) => {
   return p + 200;
 });
 {% endhighlight %}
-단순하게 보면 function이라는 키워드를 지우고 파리미터 목록 다음에 화살표(`=>`)를 넣으면 됩니다.
+단순하게 보면 function이라는 키워드를 지우고 파리미터 목록 다음에 화살표(`=>`)를 넣는다고 생각해도 되고요.
 
 함수의 내용이 하나의 익스프레션으로 표현이 되는 경우는 중괄호를 없애고 좀 더 간략하게 사용할 수 있습니다.
 {% highlight javascript %}
@@ -632,8 +634,6 @@ for (var n of fibonacci) {
 
 ### 유니코드
 전체 유니코드를 지원합니다. 스트링 안에서 유니코드를 표현할 수 있는 새로운 방식이 추가되었습니다. RegExp에는 코드 포인트를 처리하기 위해 `u` 모드가 추가되었습니다. 추가로 21bit 코드 포인트 레벨에서 스트링을 처리하는 API가 추가되었습니다.
-Non-breaking additions to support full Unicode, including new Unicode literal form in strings and new RegExp `u` mode to handle code points, as well as new APIs to process strings at the 21bit code points level.  These additions support building global apps in JavaScript.
-
 {% highlight javascript %}
 // same as ES5.1
 "𠮷".length == 2
@@ -657,7 +657,6 @@ for(var c of "𠮷") {
 
 ### 모듈
 콤포넌트를 정의할 수 있도록 모듈을 지원합니다. 
-Language-level support for modules for component definition.  Codifies patterns from popular JavaScript module loaders (AMD, CommonJS). Runtime behaviour defined by a host-defined default loader.  Implicitly async model – no code executes until requested modules are available and processed.
 
 {% highlight javascript %}
 // lib/math.js
@@ -877,8 +876,6 @@ Object.assign(Point, { origin: new Point(0,0) })
 
 ### 프로미스
 어싱크 프로그래밍에 사용할 수 있는 라이브러리입니다. 
-
-
 {% highlight javascript %}
 function timeout(duration = 0) {
     return new Promise((resolve, reject) => {
@@ -922,7 +919,6 @@ factorial(100000)
 {% endhighlight %}
 
 참고: [ES6 tail calls](http://benignbemine.github.io/2015/07/19/es6-tail-calls/)
-
 
 ---
 
