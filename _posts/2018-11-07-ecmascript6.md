@@ -8,7 +8,7 @@ tags: [ES6, ECMAScript 6, ECMAScript 2015]
 ## ES6 소개
 자바스크립트는 2009년에 이크마스크립트 2009(ECMAScript 2009)가 발표된 후 2015년에 새로운 표준을 발표하게 됩니다. 새로 발표된 이크마스크립트 6(ECMAScript 6, ECMAScript 2015, ES6)는 프로그래밍을 좀 더 유연하고 편하게 할 수 있는 다수의 기능을 포함하고 있습니다. 현재 주요 자바스크립트 엔진에서는 대부분의 기능을 구현한 상태입니다. 각 브라우저별 구현 상태는 [ES6 호환 테이블](http://kangax.github.io/es5-compat-table/es6/)에서 확인 할 수 있습니다.
 최근 상당한 인기를 끌고 있는 [Node.js](https://nodejs.org)를 배우기 위해서는 ES6에 새로 추가된 기능을 알아두는 것이 여러모로 유용합니다. 특히나 이미 자바스크립트로 프로그래밍을 하는데 익숙하신 분들은 ES6에 추가된 기능을 한번 쭉 훌터보는 것만으로 도움이 됩니다.
-
+![ECMAScript6](/assets/images/ecmascript6.png)
 이번 글에서는 ES6에 추가된 기능을 뽑아서 간략하게 설명을 하려고 합니다. 목록과 내용은 [Luke Hoban의 글](https://github.com/lukehoban/es6features)에서 가져왔고 새로 작성한 내용과 번역으로 옮겨 놓은 내용이 섞여 있습니다.
 전체 ES6의 내용을 보시려면 [ES6 표준](http://www.ecma-international.org/ecma-262/6.0/)을 참고하세요.
 
