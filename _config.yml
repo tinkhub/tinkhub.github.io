@@ -151,6 +151,13 @@ analytics:
     tracking_id : UA-116688137-2 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
+## => Adsense
+##############################
+google_adsense:
+  id              : ca-pub-4678319374235979 # Google Adsense ID
+  auto_ads        : false # false (default)
+  article_top     : true # false (default)
+  article_bottom  : true # false (default)
 
 ## => Build
 ##############################

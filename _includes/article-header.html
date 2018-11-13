@@ -43,7 +43,9 @@
     <header style="display:none;"><h1>{{ _article_title }}</h1></header>
   {%- endif -%}
 {%- endif -%}
-
+{%- if site.google_adsense.article_top -%}
+  {%- include google-adsense/article-top.html -%}
+{%- endif -%}
 {%- if include.semantic != false -%}
   <meta itemprop="headline" content="{{ _article_title }}">
 {%- endif -%}

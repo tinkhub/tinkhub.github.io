@@ -45,12 +45,9 @@
 {%- assign _sources = __return -%}
 <link rel="stylesheet" href="{{ _sources.font_awesome }}" >
 
-<!-- adSense [ -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-4678319374235979",
-          enable_page_level_ads: true
-     });
-</script>
-<!-- adSense ] -->
+{%- if site.google_adsense.id -%}
+{% include google-adsense/google-adsense.html %}
+{%- endif -%}
+{%- if site.google_adsense.auto_ads -%}
+  {% include google-adsense/auto-ads.html %}
+{%- endif -%}
