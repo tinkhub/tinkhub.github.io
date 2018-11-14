@@ -1,5 +1,5 @@
 ---
-title:  깃 커밋 가이드
+title:  깃(Git) 커밋 가이드
 key: 20181111
 categories: [git]
 tags: [Git, git guide]

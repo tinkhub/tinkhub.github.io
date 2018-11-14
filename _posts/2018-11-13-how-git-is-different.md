@@ -1,5 +1,5 @@
 ---
-title:  깃은 뭐가 다른가?
+title:  깃(Git)은 뭐가 다른가?
 key: 20181113
 categories: [git]
 tags: [Git, git guide]
