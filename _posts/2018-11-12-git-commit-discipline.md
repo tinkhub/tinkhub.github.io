@@ -3,6 +3,8 @@ title:  깃(Git) 커밋 가이드
 key: 20181111
 categories: [git]
 tags: [Git, git guide]
+redirect_to:
+  - https://tech.10000lab.xyz/git/git-commit-discipline.html
 ---
 
 ## 깃(Git) 커밋마다 겪는 일

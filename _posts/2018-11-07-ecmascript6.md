@@ -3,6 +3,8 @@ title: ECMAScript 6
 key: 20181107
 categories: [javascript]
 tags: [ES6, ECMAScript 6, ECMAScript 2015]
+redirect_to:
+  - https://tech.10000lab.xyz/javascript/ecmascript6.html
 ---
 
 ## ES6 소개

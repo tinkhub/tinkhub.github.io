@@ -3,6 +3,8 @@ title:  깃(Git)은 뭐가 다른가?
 key: 20181113
 categories: [git]
 tags: [Git, git guide]
+redirect_to:
+  - https://tech.10000lab.xyz/git/how-git-is-different.html
 ---
 
 ## 깃(git)에 관한 기본 지식
