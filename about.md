@@ -2,6 +2,8 @@
 layout: article
 titles: About
 key: page-about
+redirect_to:
+  - https://tech.10000lab.xyz/about.html
 ---
 
 호주 시드니 [줌줌투어](https://www.zoomzoomtour.com)에서 소프트웨어 개발자로 일하는 켄(Ken)입니다. 벌써 5년을 훌쩍 넘겨 일하고 있으니 한국 이름보다는 영어 이름이 더 익숙하고요. 영어 이름을 부르기는 하지만 팀원은 모두 한국분들이세요. 영어 이름에는 익숙하지만 영어는 하나도 익숙하지 않다는 게 큰 함정이죠.
